@@ -19,6 +19,7 @@
 include_recipe "python::pip"
 
 execute "apt-get update"
+execute "apt-get install g++ -y"
 
 packages = ["sqlite3", "libfreetype6-dev", "libpng-dev", "gfortran", "libblas-dev", "liblapack-dev"]
 packages.each do |pkg|
@@ -28,10 +29,10 @@ packages.each do |pkg|
 end
 
 python_packages = [ "ipython", "numpy", "matplotlib", "scipy", "pandas", "scikit-learn", 
-                    "patsy", "statsmodels", "pyzmq", "tornado","pymc"]
+                    "patsy", "statsmodels", "pyzmq", "tornado","pymc","cython","jinja2"]
 python_packages.each do |pkg|
     python_pip pkg do
       action :install
-      action :upgrade
+ #     action :upgrade
     end
 end

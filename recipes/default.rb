@@ -28,8 +28,8 @@ packages.each do |pkg|
     end
 end
 
-python_packages = ["ipython", "numpy", "matplotlib", "scipy", "pandas", "scikit-learn", 
-  "statsmodels", "patsy", "pyzmq", "tornado","pymc"]
+python_packages = [ "ipython", "numpy", "matplotlib", "scipy", "pandas", "scikit-learn", 
+                    "patsy", "statsmodels", "pyzmq", "tornado","pymc"]
 python_packages.each do |pkg|
     python_pip pkg do
       virtualenv virtualenv_path

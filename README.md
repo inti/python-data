@@ -1,8 +1,21 @@
 Description
 ===========
 
-Creates a Python data analysis playground by creating a virtual environment 
-and installing common data-related packages.
+Install python packages for data analysis.
+Full list of packages can be found on the recipes/default.rb file but it includes
+
+* IPython
+* Pandas
+* numpy
+* scipy
+* matplotib
+* scikit-learn
+* statsmodels and patsy
+* pymc
+
+All pachages will be installed with pip install pkg --upgrade so the latest version will be available.
+
+
 
 Requirements
 ============
@@ -22,23 +35,13 @@ Cookbooks
 ---------
 
 Requires Opscode's apt cookbook.
-Requires Opscode's python cookbook to create virtualenv and pip
-install packages. 
-See _Attributes_ for more information.
-
-Attributes
-==========
-
-See the `attributes/server.rb` or `attributes/client.rb` for default
-values. 
-
-* `node['python-data']['virtualenv_dir'] - location of virtual environment
-* `node['python-data']['virtualenv_name'] - name of the virtual environment
+Requires Opscode's python cookbook for pip to install packages. 
 
 License and Author
 ==================
 
-- Author:: Becky Sweger
+- Current version by Inti Pedroso
+- Original Author:: Becky Sweger and its license
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.

@@ -16,5 +16,5 @@
 # limitations under the License.
 #
 
-default["python-data"]["virtualenv_dir"] = ENV['HOME'] + "/"
-default["python-data"]["virtualenv_name"] = "project"
+#default["python-data"]["virtualenv_dir"] = ENV['HOME'] + "/"
+#default["python-data"]["virtualenv_name"] = "project"

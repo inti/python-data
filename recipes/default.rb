@@ -28,17 +28,12 @@ packages.each do |pkg|
     end
 end
 
-# create virtual environment and install python data resources
-virtualenv_path = node['python-data']['virtualenv_dir'] + node['python-data']['virtualenv_name']
-python_virtualenv virtualenv_path do
-    action :create
-end
-
 python_packages = ["ipython", "numpy", "matplotlib", "scipy", "pandas", "scikit-learn", 
-  "statsmodels", "patsy", "pyzmq", "tornado"]
+  "statsmodels", "patsy", "pyzmq", "tornado","pymc"]
 python_packages.each do |pkg|
     python_pip pkg do
       virtualenv virtualenv_path
       action :install
+      action :upgrade
     end
 end

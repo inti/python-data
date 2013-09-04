@@ -31,7 +31,6 @@ python_packages = [ "ipython", "numpy", "matplotlib", "scipy", "pandas", "scikit
                     "patsy", "statsmodels", "pyzmq", "tornado","pymc"]
 python_packages.each do |pkg|
     python_pip pkg do
-      virtualenv virtualenv_path
       action :install
       action :upgrade
     end
